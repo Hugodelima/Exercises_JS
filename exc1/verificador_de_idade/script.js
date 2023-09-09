@@ -29,10 +29,10 @@ function pegarValorRadio(radio){
 }
 function verificarCampos(anoNascimento,radio){
     if (anoNascimento <= 0 || anoNascimento > dataAtual() || isNaN(anoNascimento))  {
-        alert("Peenche sua data de nascimento")
+        resultado.textContent = "Peenche sua data de nascimento"
         return false
     }else if(pegarValorRadio(radio) == undefined ){
-        alert("Informe seu genero")
+        resultado.textContent = "Informe seu genero"
         return false
     }
     else{
@@ -50,7 +50,13 @@ btnVerificar.addEventListener("click",(naorecarregar) =>{
 
     let anoNascimento = parseInt(document.getElementById("idade").value)
     if (verificarCampos(anoNascimento,radio)){
-        resultado.textContent = `${pegarValorRadio(radio)}Sua idade seria ${dataAtual()-anoNascimento}`
+        resultado.textContent = `Detectamos ${pegarValorRadio(radio)} com ${dataAtual()-anoNascimento} anos`
+        if ((dataAtual()-anoNascimento) <= 12 && (pegarValorRadio(radio)) == 'Homem'){
+            console.log("masculino menor de 12")
+       
+        }
+        
+
 
     }
     
