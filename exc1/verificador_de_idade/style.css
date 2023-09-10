@@ -32,6 +32,14 @@ label,input,button,b{
     font-size: 20px;
 }
 
+img{
+    margin-top: 1rem;
+    display: flex;
+    margin: auto;
+    border-radius: 50rem;
+    width: 50%;
+    height: 50%;
+}
 footer{
     text-align: center;
     margin-top: 2rem;
